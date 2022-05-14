@@ -1,2 +1,112 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-color: hsl(225, 100%, 94%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    position: relative;
+    margin: 2em 0em 2em 0em;
+}
+
+div.card {
+    background-color: rgb(255, 255, 255); 
+    max-width: 27em;
+    border-radius: 1.5em;
+    overflow:hidden;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.card-content{
+    padding: 2em;
+    text-align: center;
+}
+
+
+div.card-content > h1{
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    margin-bottom: 0.5em;
+
+}
+
+div.card-content > p {
+    margin: 0.5em 2em 1.5em 2em;
+    color: hsl(224, 23%, 55%);
+}
+
+div.plan-container{
+    display: flex;
+    justify-content:space-between;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 1em;
+    padding: 1em 1.5em 1em 1.5em;
+    align-items: center;
+    margin-bottom: 2em;
+
+}
+
+div.plan-container-left{
+    display: flex;
+    justify-content: space-between;
+  }
+
+div.plan-container-left > div{
+    margin-left:1.5em;
+    color: hsl(224, 23%, 55%);
+}
+
+h2{
+    font-size: 1em;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    margin-bottom: 0.2em;
+}
+
+div.plan-container-right a{
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+}
+
+
+
+button{
+    width: 100%;
+    padding: 1em;
+    border-radius: 1.2em;
+}
+
+button[id="payment"]{
+    background-color: hsl(245, 75%, 52%);
+    border-radius: 1.2em;
+    color:rgb(255, 255, 255);
+    border: none;
+}
+
+button[id="order-cancel"]{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1em;
+    border: none;
+    color:rgb(116, 108, 108);
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
