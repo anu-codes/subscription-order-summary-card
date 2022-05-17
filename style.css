@@ -1,112 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+  
+--pale-blue: hsl(225, 100%, 94%);
+--bright-blue: hsl(245, 75%, 52%);
+
+--very-pale-blue: hsl(225, 100%, 98%);
+--desaturated-blue: hsl(224, 23%, 55%);
+--dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-color: var(--pale-blue);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  margin: 2rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-body {
-    background-image: url("./images/pattern-background-mobile.svg");
-    background-color: hsl(225, 100%, 94%);
-    background-repeat: no-repeat;
-    background-size: contain;
-    min-height: 100vh;
-    font-family: 'Red Hat Display', sans-serif;
-    font-size: 16px;
-    position: relative;
-    margin: 2em 0em 2em 0em;
+main{
+  max-width: 27em;
+  margin: 0 auto;
 }
 
 div.card {
-    background-color: rgb(255, 255, 255); 
-    max-width: 27em;
-    border-radius: 1.5em;
-    overflow:hidden;
-    position: absolute;
-    left: 50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
 }
 
-.card-content{
-    padding: 2em;
-    text-align: center;
+img[id="hero"]{
+  width: 100%;
+  height: auto;
 }
 
-
-div.card-content > h1{
-    color: hsl(223, 47%, 23%);
-    font-weight: 900;
-    margin-bottom: 0.5em;
-
+.card-content {
+  padding: 2rem;
+  text-align: center;
 }
 
-div.card-content > p {
-    margin: 0.5em 2em 1.5em 2em;
-    color: hsl(224, 23%, 55%);
+.card-content > h1 {
+  color: var(--dark-blue);
+  font-weight: 900;
+  margin-bottom: 1rem;
 }
 
-div.plan-container{
-    display: flex;
-    justify-content:space-between;
-    background-color: hsl(225, 100%, 98%);
-    border-radius: 1em;
-    padding: 1em 1.5em 1em 1.5em;
-    align-items: center;
-    margin-bottom: 2em;
-
+.card-content > p {
+  margin: 0.5rem 2.5rem 1.5rem 2.5rem;
+  color: var(--desaturated-blue);
 }
 
-div.plan-container-left{
-    display: flex;
-    justify-content: space-between;
-  }
-
-div.plan-container-left > div{
-    margin-left:1.5em;
-    color: hsl(224, 23%, 55%);
+.plan-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--very-pale-blue);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-h2{
-    font-size: 1em;
-    font-weight: 900;
-    color: hsl(223, 47%, 23%);
-    margin-bottom: 0.2em;
+.plan-container-left {
+  display: flex;
+  justify-content: space-between;
 }
 
-div.plan-container-right a{
-    font-weight: 700;
-    color: hsl(245, 75%, 52%);
+.plan-container-left > span {
+  margin-left: 1.5em;
+  color: var(--desaturated-blue);
 }
 
-
-
-button{
-    width: 100%;
-    padding: 1em;
-    border-radius: 1.2em;
+h2 {
+  font-size: 1em;
+  font-weight: 900;
+  color: var(--dark-blue);
+  margin-bottom: 0.2rem;
 }
 
-button[id="payment"]{
-    background-color: hsl(245, 75%, 52%);
-    border-radius: 1.2em;
-    color:rgb(255, 255, 255);
-    border: none;
+.plan-container-right a {
+  font-weight: 700;
+  color: var(--bright-blue);
 }
 
-button[id="order-cancel"]{
-    background-color: rgb(255, 255, 255);
-    border-radius: 1em;
-    border: none;
-    color:rgb(116, 108, 108);
-}
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+.plan-container-right a:hover{
+  text-decoration: none;
+  opacity: 0.7;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+a[id="payment-btn"] {
+  display: block;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  background-color: var(--bright-blue);
+  border-radius: 1rem;
+  border: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a[id="payment-btn"]:hover{
+ opacity: 0.7;
+}
+
+a[id="cancel-btn"] {
+  display: block;
+  padding: 1rem 2rem 1rem 2rem;
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+
+a[id="cancel-btn"]:hover {
+  color:var(--dark-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
