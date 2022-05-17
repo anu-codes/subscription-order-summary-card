@@ -79,7 +79,7 @@ img[id="hero"]{
   justify-content: space-between;
 }
 
-.plan-container-left > span {
+.plan-container-left > div {
   margin-left: 1.5em;
   color: var(--desaturated-blue);
 }
