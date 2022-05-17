@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/order-summary-page-using-html-vanilla-css-and-flexbox-jt7VAAkHD2)
 - Live Site URL: (https://subscription-order-summary.netlify.app/)
 
 ## My process
